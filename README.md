@@ -9,3 +9,4 @@
 - [Гронин Данил](https://github.com/DanilCalib)
 - [Варданян Геворг](https://github.com/el-hopaness-romtic)
 - [Шадько Роман](https://github.com/ro-SH)
+- [Анненков Владислав](https://github.com/Vakosta)
