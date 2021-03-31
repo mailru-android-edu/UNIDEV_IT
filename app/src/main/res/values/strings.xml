@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">UnidevFitness</string>
-    <string name="first_fragment">First Fragment</string>
+    <string name="good_fragment">Good Fragment</string>
 </resources>
