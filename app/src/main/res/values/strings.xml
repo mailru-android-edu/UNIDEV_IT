@@ -1,4 +1,33 @@
 <resources>
-    <string name="app_name">UnidevFitness</string>
-    <string name="good_fragment">Good Fragment</string>
+    <string name="app_name">UNIDEV</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">UNIDEV Fitness</string>
+    <string name="nav_header_subtitle">Universal Fitness Development</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_blog">Blog</string>
+    <string name="menu_trainings">Training</string>
+    <string name="menu_diet">Diet</string>
+    <string name="menu_adv">Advices</string>
+    <string name="menu_motivation">Motivation</string>
+    <string name="menu_options">Options</string>
+    <string name="menu_favorites">Favorites</string>
+
+    <string name="menu_home_ru">Главная</string>
+    <string name="menu_gallery_ru">Прогресс</string>
+    <string name="menu_slideshow_ru">Календарь</string>
+    <string name="menu_blog_ru">Блог</string>
+    <string name="menu_trainings_ru">Тренировки</string>
+    <string name="menu_diet_ru">Питание</string>
+    <string name="menu_adv_ru">Советы</string>
+    <string name="menu_motivation_ru">Мотивация</string>
+    <string name="menu_options_ru">Параметры</string>
+    <string name="menu_favorites_ru">Избранное</string>
+
+
 </resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_glav"
+            android:title="@string/menu_home_ru" />
+        <item
+            android:id="@+id/nav_trainings"
+            android:icon="@drawable/ic_menu_trainings"
+            android:title="@string/menu_trainings_ru" />
+        <item
+            android:id="@+id/nav_diet"
+            android:icon="@drawable/ic_menu_diet"
+            android:title="@string/menu_diet_ru" />
+        <item
+            android:id="@+id/nav_adv"
+            android:icon="@drawable/ic_menu_adv"
+            android:title="@string/menu_adv_ru" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery1"
+            android:title="@string/menu_gallery_ru" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow1"
+            android:title="@string/menu_slideshow_ru" />
+        <item
+            android:id="@+id/nav_blog"
+            android:icon="@drawable/ic_menu_blog"
+            android:title="@string/menu_blog_ru" />
+        <item
+            android:id="@+id/nav_motivation"
+            android:icon="@drawable/ic_menu_motivation"
+            android:title="@string/menu_motivation_ru" />
+        <item
+            android:id="@+id/nav_favorites"
+            android:icon="@drawable/ic_menu_favorites"
+            android:title="@string/menu_favorites_ru" />
+        <item
+            android:id="@+id/nav_options"
+            android:icon="@drawable/ic_menu_options"
+            android:title="@string/menu_options_ru" />
+    </group>
+</menu>
