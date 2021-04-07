@@ -23,9 +23,12 @@ class DietFragment : Fragment() {
                 ViewModelProvider(this).get(DietViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_diet, container, false)
         val textView: TextView = root.findViewById(R.id.text_diet)
-        dietViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+        dietViewModel.text.observe(
+                viewLifecycleOwner,
+                Observer {
+                    textView.text = it
+                }
+        )
         return root
     }
 }

@@ -23,9 +23,12 @@ class BlogFragment : Fragment() {
                 ViewModelProvider(this).get(BlogViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_blog, container, false)
         val textView: TextView = root.findViewById(R.id.text_blog)
-        blogViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+        blogViewModel.text.observe(
+                viewLifecycleOwner,
+                Observer {
+                    textView.text = it
+                }
+        )
         return root
     }
 }

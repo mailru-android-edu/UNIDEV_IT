@@ -20,12 +20,15 @@ class MotivationFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         motivationViewModel =
-            ViewModelProvider(this).get(MotivationViewModel::class.java)
+                ViewModelProvider(this).get(MotivationViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_motivation, container, false)
         val textView: TextView = root.findViewById(R.id.text_motivation)
-        motivationViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+        motivationViewModel.text.observe(
+                viewLifecycleOwner,
+                Observer {
+                    textView.text = it
+                }
+        )
         return root
     }
 }
