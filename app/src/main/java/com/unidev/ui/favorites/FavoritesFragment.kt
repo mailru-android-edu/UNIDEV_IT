@@ -20,14 +20,14 @@ class FavoritesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         favoritesViewModel =
-                ViewModelProvider(this).get(FavoritesViewModel::class.java)
+            ViewModelProvider(this).get(FavoritesViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_favorites, container, false)
         val textView: TextView = root.findViewById(R.id.text_favorites)
         favoritesViewModel.text.observe(
-                viewLifecycleOwner,
-                Observer {
-                    textView.text = it
-                }
+            viewLifecycleOwner,
+            Observer {
+                textView.text = it
+            }
         )
         return root
     }

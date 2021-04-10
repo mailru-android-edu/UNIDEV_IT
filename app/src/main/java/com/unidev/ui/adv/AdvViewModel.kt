@@ -8,8 +8,8 @@ class AdvViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is Fragment just for ADVICES" +
-                "    In nearest future" +
-                "    Some news will be here"
+            "    In nearest future" +
+            "    Some news will be here"
     }
     val text: LiveData<String> = _text
 }

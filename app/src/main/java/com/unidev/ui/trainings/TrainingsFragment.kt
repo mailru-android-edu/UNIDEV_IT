@@ -15,19 +15,19 @@ class TrainingsFragment : Fragment() {
     private lateinit var trainingsViewModel: TrainingsViewModel
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         trainingsViewModel =
-                ViewModelProvider(this).get(TrainingsViewModel::class.java)
+            ViewModelProvider(this).get(TrainingsViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_trainings, container, false)
         val textView: TextView = root.findViewById(R.id.text_trainings)
         trainingsViewModel.text.observe(
-                viewLifecycleOwner,
-                Observer {
-                    textView.text = it
-                }
+            viewLifecycleOwner,
+            Observer {
+                textView.text = it
+            }
         )
         return root
     }

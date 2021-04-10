@@ -8,8 +8,8 @@ class OptionsViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is Fragment just for some parameters of your body" +
-                "    In nearest future" +
-                "    Some news will be here"
+            "    In nearest future" +
+            "    Some news will be here"
     }
     val text: LiveData<String> = _text
 }

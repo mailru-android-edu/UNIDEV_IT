@@ -15,19 +15,19 @@ class AdvFragment : Fragment() {
     private lateinit var advViewModel: AdvViewModel
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         advViewModel =
-                ViewModelProvider(this).get(AdvViewModel::class.java)
+            ViewModelProvider(this).get(AdvViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_adv, container, false)
         val textView: TextView = root.findViewById(R.id.text_adv)
         advViewModel.text.observe(
-                viewLifecycleOwner,
-                Observer {
-                    textView.text = it
-                }
+            viewLifecycleOwner,
+            Observer {
+                textView.text = it
+            }
         )
         return root
     }
