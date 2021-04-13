@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.unidev.ui.home.HomeFragment"
+        android:label="@string/menu_home_ru"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_trainings"
+        android:name="com.unidev.ui.trainings.TrainingsFragment"
+        android:label="@string/menu_trainings_ru"
+        tools:layout="@layout/fragment_trainings" />
+
+    <fragment
+        android:id="@+id/nav_diet"
+        android:name="com.unidev.ui.diet.DietFragment"
+        android:label="@string/menu_diet_ru"
+        tools:layout="@layout/fragment_diet" />
+
+    <fragment
+        android:id="@+id/nav_adv"
+        android:name="com.unidev.ui.adv.AdvFragment"
+        android:label="@string/menu_adv_ru"
+        tools:layout="@layout/fragment_adv" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.unidev.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery_ru"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.unidev.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow_ru"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_blog"
+        android:name="com.unidev.ui.blog.BlogFragment"
+        android:label="@string/menu_blog_ru"
+        tools:layout="@layout/fragment_blog" />
+
+    <fragment
+        android:id="@+id/nav_motivation"
+        android:name="com.unidev.ui.motivation.MotivationFragment"
+        android:label="@string/menu_motivation_ru"
+        tools:layout="@layout/fragment_motivation" />
+
+    <fragment
+        android:id="@+id/nav_favorites"
+        android:name="com.unidev.ui.favorites.FavoritesFragment"
+        android:label="@string/menu_favorites_ru"
+        tools:layout="@layout/fragment_favorites" />
+
+    <fragment
+        android:id="@+id/nav_options"
+        android:name="com.unidev.ui.options.OptionsFragment"
+        android:label="@string/menu_options_ru"
+        tools:layout="@layout/fragment_options" />
+</navigation>
