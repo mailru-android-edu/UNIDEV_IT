@@ -1,6 +1,7 @@
 package com.unidev.presentation.fragments
 
 import androidx.fragment.app.Fragment
+import com.unidev.presentation.activities.INavigator
 
 abstract class AbstractFragment : Fragment() {
     fun navigator(): INavigator {
