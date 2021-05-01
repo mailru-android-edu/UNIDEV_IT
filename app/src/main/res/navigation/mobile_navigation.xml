@@ -15,7 +15,17 @@
         android:id="@+id/nav_trainings"
         android:name="com.unidev.presentation.fragments.TrainingsFragment"
         android:label="@string/menu_trainings_ru"
-        tools:layout="@layout/fragment_trainings" />
+        tools:layout="@layout/fragment_trainings">
+        <action
+            android:id="@+id/action_nav_trainings_to_nav_workout"
+            app:destination="@id/nav_workout" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_workout"
+        android:name="com.unidev.presentation.fragments.WorkoutFragment"
+        android:label="@string/menu_workout"
+        tools:layout="@layout/fragment_workout" />
 
     <fragment
         android:id="@+id/nav_diet"

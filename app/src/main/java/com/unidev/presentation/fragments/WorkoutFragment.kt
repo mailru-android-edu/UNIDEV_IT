@@ -10,7 +10,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.SimpleExoPlayer
+import com.unidev.R
 import com.unidev.databinding.FragmentWorkoutBinding
+import com.unidev.presentation.activities.MainActivity
 import com.unidev.presentation.viewmodels.WorkoutViewModel
 
 class WorkoutFragment : Fragment(), View.OnTouchListener {
@@ -38,7 +40,16 @@ class WorkoutFragment : Fragment(), View.OnTouchListener {
         player.setMediaItem(MediaItem.fromUri(VIDEO_URL))
         player.prepare()
 
+        binding.button.setOnClickListener {
+            (requireActivity() as MainActivity).fabHide()
+        }
+
         binding.button.setOnTouchListener(this)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        (requireActivity() as MainActivity).fabSetIcon(R.drawable.ic_format_list_bulleted_square)
     }
 
     override fun onDestroyView() {

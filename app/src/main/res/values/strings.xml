@@ -28,6 +28,7 @@
     <string name="menu_motivation_ru">Мотивация</string>
     <string name="menu_options_ru">Параметры</string>
     <string name="menu_favorites_ru">Избранное</string>
+    <string name="menu_workout">Тренировка</string>
 
 
 </resources>
