@@ -1,7 +1,9 @@
 package com.unidev.presentation.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
@@ -11,7 +13,7 @@ import com.google.android.exoplayer2.SimpleExoPlayer
 import com.unidev.databinding.FragmentWorkoutBinding
 import com.unidev.presentation.viewmodels.WorkoutViewModel
 
-class WorkoutFragment : Fragment() {
+class WorkoutFragment : Fragment(), View.OnTouchListener {
     private var _binding: FragmentWorkoutBinding? = null
     private val binding get() = _binding!!
 
@@ -29,15 +31,24 @@ class WorkoutFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        view.setOnTouchListener { v, event -> false }
+
         val player = SimpleExoPlayer.Builder(requireContext()).build()
         binding.videoPlayer.player = player
         player.setMediaItem(MediaItem.fromUri(VIDEO_URL))
         player.prepare()
+
+        binding.button.setOnTouchListener(this)
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onTouch(v: View?, event: MotionEvent?): Boolean {
+        Log.d("CustomButton", "onTouch()!")
+        return false
     }
 
     companion object {

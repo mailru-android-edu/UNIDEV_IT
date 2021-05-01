@@ -4,15 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.fragments.workout.WorkoutFragment">
+    tools:context=".presentation.fragments.WorkoutFragment">
 
     <com.google.android.exoplayer2.ui.StyledPlayerView
         android:id="@+id/videoPlayer"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="170dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:show_buffering="when_playing" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/videoPlayer"
+        tools:text="KekCheburek" />
+
+    <com.unidev.presentation.CustomButton
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Далее"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
