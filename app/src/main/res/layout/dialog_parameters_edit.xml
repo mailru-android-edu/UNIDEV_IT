@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+            android:id="@+id/dialog_parameters_edit__tv_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/parameters_text"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="24dp"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+    <TextView
+            android:id="@+id/dialog_parameters_edit__tv_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/height_text"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/dialog_parameters_edit__np_height"
+            app:layout_constraintBottom_toBottomOf="@id/dialog_parameters_edit__np_height"
+            android:layout_marginStart="12dp"/>
+
+    <NumberPicker
+            android:id="@+id/dialog_parameters_edit__np_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/dialog_parameters_edit__tv_header"
+            app:layout_constraintStart_toEndOf="@id/dialog_parameters_edit__tv_height"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp" />
+
+    <TextView
+            android:id="@+id/dialog_parameters_edit__tv_height_measure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sm_text"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/dialog_parameters_edit__np_height"
+            app:layout_constraintTop_toTopOf="@id/dialog_parameters_edit__np_height"
+            app:layout_constraintBottom_toBottomOf="@id/dialog_parameters_edit__np_height"
+            android:layout_marginStart="12dp"/>
+
+    <TextView
+            android:id="@+id/dialog_parameters_edit__tv_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/weight_text"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/dialog_parameters_edit__tv_height_measure"
+            app:layout_constraintTop_toTopOf="@id/dialog_parameters_edit__np_height"
+            app:layout_constraintBottom_toBottomOf="@id/dialog_parameters_edit__np_height"
+            android:layout_marginStart="24dp"/>
+
+    <NumberPicker
+            android:id="@+id/dialog_parameters_edit__np_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/dialog_parameters_edit__tv_header"
+            app:layout_constraintStart_toEndOf="@id/dialog_parameters_edit__tv_weight"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp" />
+
+    <TextView
+            android:id="@+id/dialog_parameters_edit__tv_weight_measure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kg_text"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/dialog_parameters_edit__np_weight"
+            app:layout_constraintTop_toTopOf="@id/dialog_parameters_edit__np_weight"
+            app:layout_constraintBottom_toBottomOf="@id/dialog_parameters_edit__np_weight"
+            android:layout_marginStart="12dp"/>
+
+    <Button
+            android:id="@+id/dialog_parameters_edit__btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_text"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dialog_parameters_edit__np_height"
+            android:layout_marginTop="24dp" />
+
+    <Space
+            android:layout_width="12dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/dialog_parameters_edit__tv_weight_measure"
+            app:layout_constraintTop_toTopOf="@id/dialog_parameters_edit__tv_weight_measure"/>
+
+    <Space
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            app:layout_constraintStart_toEndOf="@id/dialog_parameters_edit__btn_save"
+            app:layout_constraintTop_toBottomOf="@id/dialog_parameters_edit__btn_save"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
