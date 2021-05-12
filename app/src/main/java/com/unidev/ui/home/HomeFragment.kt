@@ -34,7 +34,10 @@ class HomeFragment : Fragment() {
     ): View {
 
         binding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_home, container, false
+            inflater,
+            R.layout.fragment_home,
+            container,
+            false
         )
 
         return binding.root
@@ -56,7 +59,6 @@ class HomeFragment : Fragment() {
         // News
         adapter = NewsAdapter(homeViewModel.news)
         binding.fragmentHomeRvNews.adapter = adapter
-//        binding.fragmentHomeRvNews.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         val pagerSnapHelper = PagerSnapHelper()
         pagerSnapHelper.attachToRecyclerView(binding.fragmentHomeRvNews)
     }
