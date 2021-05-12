@@ -24,16 +24,14 @@ class NewsAdapter(private val news: List<NewsItem>) : RecyclerView.Adapter<NewsA
 
     inner class NewsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
+        private val ivBackground: ImageView = itemView.findViewById(R.id.item_news__iv_background)
         private val tvTitle: TextView = itemView.findViewById(R.id.item_news__tv_title)
         private val tvDate: TextView = itemView.findViewById(R.id.item_news__tv_date)
-        private val tvText: TextView = itemView.findViewById(R.id.item_news__tv_text)
-        private val ivImage: ImageView = itemView.findViewById(R.id.item_news__iv_image)
 
         fun bind(newsItem: NewsItem) {
             tvTitle.text = newsItem.title
             tvDate.text = newsItem.date
-            tvText.text = newsItem.text
-            ivImage.setImageResource(newsItem.image)
+            ivBackground.setBackgroundResource(newsItem.image)
         }
     }
 }

@@ -43,6 +43,7 @@
                     android:layout_gravity="center"
                     android:text="@{@string/format_name(homeViewModel.name, homeViewModel.age)}"
                     tools:text="Иван Иванов, 20"
+                    android:textColor="@color/secondary_text"
                     android:layout_marginTop="10dp" />
 
             <TextView
@@ -51,7 +52,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="@{@string/format_city(homeViewModel.city, homeViewModel.country)}"
-                    tools:text="Москва, Россия" />
+                    tools:text="Москва, Россия"
+                    android:textColor="@color/secondary_text"/>
 
             <TextView
                     android:id="@+id/fragment_home__tv_profile_subscription"
@@ -60,6 +62,7 @@
                     android:layout_gravity="center"
                     android:text="@{@string/format_subscription(homeViewModel.subscription)}"
                     tools:text="Подписка: Silver"
+                    android:textColor="@color/secondary_text"
                     android:layout_marginTop="8dp" />
 
             <TextView
@@ -68,7 +71,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="@{@string/format_guide(homeViewModel.guide)}"
-                    tools:text="Гайд: Похудение"/>
+                    tools:text="Гайд: Похудение"
+                    android:textColor="@color/secondary_text"/>
 
         </LinearLayout>
 
@@ -83,8 +87,9 @@
                 android:id="@+id/fragment_home__tv_parameters"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Параметры"
+                android:text="@string/parameters_text"
                 android:textSize="18sp"
+                android:textColor="@color/primary_color"
                 app:layout_constraintTop_toBottomOf="@id/fragment_home__divider_profile"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginTop="12dp"
@@ -105,10 +110,11 @@
                 android:id="@+id/fragment_home__tv_weight_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Вес:"
+                android:text="@string/weight_text"
                 app:layout_constraintTop_toBottomOf="@id/fragment_home__tv_parameters"
                 app:layout_constraintStart_toStartOf="@id/fragment_home__tv_parameters"
-                android:layout_marginTop="12dp" />
+                android:layout_marginTop="12dp"
+                android:textColor="@color/secondary_text"/>
 
         <TextView
                 android:id="@+id/fragment_home__tv_weight"
@@ -116,6 +122,7 @@
                 android:layout_height="wrap_content"
                 android:text="@{@string/format_weight(homeViewModel.weight)}"
                 tools:text="70 кг"
+                android:textColor="@color/secondary_text"
                 app:layout_constraintBottom_toBottomOf="@id/fragment_home__tv_weight_text"
                 app:layout_constraintStart_toEndOf="@id/fragment_home__tv_weight_text"
                 android:layout_marginStart="12dp" />
@@ -124,7 +131,8 @@
                 android:id="@+id/fragment_home__tv_height_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Рост:"
+                android:text="@string/height_text"
+                android:textColor="@color/secondary_text"
                 app:layout_constraintTop_toBottomOf="@id/fragment_home__tv_weight_text"
                 app:layout_constraintStart_toStartOf="@id/fragment_home__tv_parameters" />
 
@@ -134,6 +142,7 @@
                 android:layout_height="wrap_content"
                 android:text="@{@string/format_height(homeViewModel.height)}"
                 tools:text="177 см"
+                android:textColor="@color/secondary_text"
                 app:layout_constraintBottom_toBottomOf="@id/fragment_home__tv_height_text"
                 app:layout_constraintStart_toEndOf="@id/fragment_home__tv_height_text"
                 android:layout_marginStart="12dp" />
@@ -142,7 +151,8 @@
                 android:id="@+id/fragment_home__tv_index_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Индекс:"
+                android:text="@string/index_text"
+                android:textColor="@color/secondary_text"
                 app:layout_constraintTop_toBottomOf="@id/fragment_home__tv_height_text"
                 app:layout_constraintStart_toStartOf="@id/fragment_home__tv_parameters" />
 
@@ -152,6 +162,7 @@
                 android:layout_height="wrap_content"
                 android:text="@{@string/format_index(homeViewModel.index)}"
                 tools:text="0.00"
+                android:textColor="@color/secondary_text"
                 app:layout_constraintBottom_toBottomOf="@id/fragment_home__tv_index_text"
                 app:layout_constraintStart_toEndOf="@id/fragment_home__tv_index_text"
                 android:layout_marginStart="12dp" />
@@ -160,8 +171,9 @@
                 android:id="@+id/fragment_home__tv_news"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Новости"
+                android:text="@string/new_text"
                 android:textSize="18sp"
+                android:textColor="@color/primary_color"
                 app:layout_constraintTop_toBottomOf="@id/fragment_home__tv_index_text"
                 app:layout_constraintStart_toStartOf="@id/fragment_home__tv_parameters"
                 android:layout_marginTop="12dp" />
@@ -170,9 +182,14 @@
                 android:id="@+id/fragment_home__rv_news"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                android:clipToPadding="false"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
                 app:layout_constraintTop_toBottomOf="@id/fragment_home__tv_news"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="4dp"/>
+                android:layout_marginTop="12dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

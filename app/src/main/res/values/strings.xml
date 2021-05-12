@@ -35,6 +35,15 @@
     <string name="format_weight">%1$d кг</string>
     <string name="format_height">%1$d см</string>
     <string name="format_index">%1$.2f</string>
+    <string name="more_text">Подробнее</string>
+    <string name="parameters_text">Параметры</string>
+    <string name="weight_text">Вес:</string>
+    <string name="height_text">Рост:</string>
+    <string name="index_text">Индекс:</string>
+    <string name="new_text">Новости</string>
+    <string name="save_text">Сохранить</string>
+    <string name="sm_text">см</string>
+    <string name="kg_text">кг</string>
 
 
 </resources>

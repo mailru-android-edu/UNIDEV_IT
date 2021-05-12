@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.unidev.R
+import kotlin.math.pow
 
 class HomeViewModel : ViewModel() {
 
@@ -53,22 +54,26 @@ class HomeViewModel : ViewModel() {
         _country.value = "Россия"
         _guide.value = "Похудение"
         _height.value = 177
-        _index.value = 0.0
         _name.value = "Иван Иванов"
         _subscription.value = "Silver"
         _weight.value = 70
+        _index.value = calcIndex(_height.value!!, _weight.value!!)
     }
 
-    fun setName(firstName: String, secondName: String) {
-        _name.value = "$firstName $secondName"
+    fun setParameters(height: Int, weight: Int) {
+        _height.value = height
+        _weight.value = weight
+        _index.value = calcIndex(_height.value!!, _weight.value!!)
     }
 }
 
 fun generateList(): List<NewsItem> {
     return listOf(
-        NewsItem("Какой-то заголовок", "27 Янв 2020 19:10", "Какой-то текст", R.mipmap.ic_launcher),
-        NewsItem("Какой-то заголовок", "27 Янв 2020 19:10", "Какой-то текст", R.mipmap.ic_launcher),
-        NewsItem("Какой-то заголовок", "27 Янв 2020 19:10", "Какой-то текст", R.mipmap.ic_launcher),
-        NewsItem("Какой-то заголовок", "27 Янв 2020 19:10", "Какой-то текст", R.mipmap.ic_launcher)
+        NewsItem("Что-то важное", "27 Янв 2021 19:10", R.drawable.running),
+        NewsItem("Что-то о спорте", "28 Янв 2021 13:18", R.drawable.running),
+        NewsItem("Ещё что-то о спорте", "01 Фев 2021 22:01", R.drawable.running),
+        NewsItem("Самое интересное", "03 Фев 2021 15:32", R.drawable.running)
     )
 }
+
+fun calcIndex(height: Int, weight: Int) = weight / (height.toDouble() / 100).pow(2)
